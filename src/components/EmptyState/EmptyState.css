@@ -1,0 +1,29 @@
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--card-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.empty-illustration {
+  width: 120px;
+  height: 100px;
+  margin: 0 auto 20px;
+  color: var(--text-secondary);
+}
+
+.empty-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.empty-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  max-width: 360px;
+  margin: 0 auto;
+  line-height: 1.6;
+}

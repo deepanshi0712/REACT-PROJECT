@@ -1,0 +1,5 @@
+# Placeholder for static assets (images, icons, etc.)
+
+This folder is reserved for any future image or icon files used in the GoalFlow application.
+
+Currently, the app uses inline SVG for the empty state illustration and emoji for simple icons.

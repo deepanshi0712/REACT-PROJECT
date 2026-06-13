@@ -1,0 +1,21 @@
+.goal-list-section {
+  margin-bottom: 24px;
+}
+
+.goal-list-section .section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.goal-count {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.goal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}

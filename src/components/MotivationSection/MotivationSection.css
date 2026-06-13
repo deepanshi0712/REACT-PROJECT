@@ -1,0 +1,48 @@
+.motivation-section {
+  margin-bottom: 24px;
+}
+
+.motivation-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.motivation-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.motivation-streak {
+  border-left: 3px solid var(--warning);
+}
+
+.motivation-level {
+  border-left: 3px solid var(--primary);
+}
+
+.motivation-badge {
+  border-left: 3px solid var(--success);
+}
+
+.motivation-default {
+  border-left: 3px solid var(--text-secondary);
+}
+
+.motivation-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.motivation-text {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.4;
+}

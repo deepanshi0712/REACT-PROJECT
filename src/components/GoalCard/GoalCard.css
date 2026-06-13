@@ -1,0 +1,212 @@
+.goal-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.goal-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.goal-card.completed {
+  opacity: 0.85;
+  border-left: 3px solid var(--success);
+}
+
+.goal-card.overdue {
+  border-left: 3px solid var(--danger);
+}
+
+.goal-card.upcoming {
+  border-left: 3px solid var(--warning);
+}
+
+.goal-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.checkbox-wrapper input:checked ~ .checkmark {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.checkbox-wrapper input:checked ~ .checkmark::after {
+  content: '✓';
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.checkbox-wrapper:hover .checkmark {
+  border-color: var(--primary);
+}
+
+.goal-title {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.goal-title.struck {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.priority-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.priority-high {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--danger);
+}
+
+.priority-medium {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--warning);
+}
+
+.priority-low {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+}
+
+.goal-description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.goal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.meta-item {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.deadline-status {
+  margin-bottom: 12px;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius);
+}
+
+.status-overdue {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
+
+.status-upcoming {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.status-normal {
+  background: var(--bg-color);
+  color: var(--text-secondary);
+}
+
+.status-done {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+  margin-bottom: 12px;
+}
+
+.goal-card-actions {
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+
+.action-btn {
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-main);
+  transition: all 0.2s;
+}
+
+.edit-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.delete-btn:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.celebration-overlay {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.5rem;
+  animation: confetti-fall 0.6s ease forwards;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .goal-card-header {
+    flex-wrap: wrap;
+  }
+
+  .priority-badge {
+    margin-left: 30px;
+  }
+}

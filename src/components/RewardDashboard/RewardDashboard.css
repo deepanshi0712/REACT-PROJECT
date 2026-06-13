@@ -1,0 +1,142 @@
+.reward-dashboard {
+  margin-bottom: 24px;
+}
+
+.reward-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.reward-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.level-badge {
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 72px;
+}
+
+.level-number {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.level-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.xp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.xp-total {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.xp-sub {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.xp-progress-section {
+  margin-bottom: 18px;
+}
+
+.xp-progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.xp-progress-bar-bg {
+  height: 10px;
+  background: var(--bg-color);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.xp-progress-bar-fill {
+  height: 100%;
+  background: var(--warning);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+  min-width: 0;
+}
+
+.streak-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.streak-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.streak-icon {
+  font-size: 1.2rem;
+}
+
+.streak-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.streak-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.streak-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border-color);
+}
+
+@media (max-width: 540px) {
+  .streak-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .streak-divider {
+    width: 80%;
+    height: 1px;
+  }
+
+  .streak-item {
+    width: 100%;
+  }
+}
